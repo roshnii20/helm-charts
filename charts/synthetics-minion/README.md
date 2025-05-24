@@ -65,12 +65,14 @@ helm install newrelic/synthetics-minion \
 
 To inject additional environment variables into the container, define them under `synthetics.customEnvVars` in `values.yaml`:
 
+```sh
   synthetics:
     customEnvVars:
       - name: MY_ENV_VAR
-        value: "value1"
-      - name: LOG_LEVEL
-        value: "debug"
+        value: "some-value"
+      - name: ANOTHER_VAR
+        value: "another-value"
+```
 
 ## Resources
 

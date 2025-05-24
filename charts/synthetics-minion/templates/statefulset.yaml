@@ -191,7 +191,7 @@ spec:
 
             {{- if .Values.synthetics.customEnvVars }}
             {{- range .Values.synthetics.customEnvVars }}
-            - name: {{ .name | quote }}
+            - name: {{ .name }}
               value: {{ .value | quote }}
             {{- end }}
             {{- end }}
