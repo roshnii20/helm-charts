@@ -28,6 +28,7 @@ This chart will deploy the New Relic Synthetics Containerized Private Minion as 
 | `synthetics.minionUserDefinedEnvVariable`         | A locally hosted set of user defined key value pairs. See [example](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/private-locations/containerized-private-minion-cpm-configuration#vars-scripted-monitors)                                                                                                                                          |                                                                                                                                                                      |
 | `synthetics.minionJVMOpts`                        | Passes command line options to the internal JVM.                                                                                                                                                                                                                                                                                                                     | `-server -XX:-UsePerfData`                                                                                                                                           |
 | `synthetics.minionNetworkHealthCheckDisabled`     | The Minion Network Healthcheck disabled state, to manage the CPM check for public internet access. Set as 'true' to bypass this health check.                                                                                                                                                                                                                        | `false`                                                                                                                                                              |
+| `synthetics.customEnvVars`                        | List of custom environment variables to inject into the container. Each item must contain `name` and `value` fields. Example: `synthetics: customEnvVars: [{name: MY_ENV_VAR, value: "value1"}, {name: LOG_LEVEL, value: "debug"}]`                                                                                                                                                                                         | `[]`                                                                                                                                                                 |
 | `image.repository`                                | The container to pull.                                                                                                                                                                                                                                                                                                                                               | `quay.io/newrelic/synthetics-minion`                                                                                                                                 |
 | `image.pullPolicy`                                | The pull policy.                                                                                                                                                                                                                                                                                                                                                     | `IfNotPresent`                                                                                                                                                       |
 | `persistence.claimName`                           | The name of the PVC to use. If undefined or not set Statefulset will dynamically create a PVC for each replica                                                                                                                                                                                                                                                       |                                                                                                                                                                      |
@@ -59,6 +60,17 @@ Then, to install this chart, run the following command:
 helm install newrelic/synthetics-minion \
 --set synthetics.privateLocationKey=<enter_synthetics_private_location_key> \
 ```
+
+## Example: Add Custom Environment Variables
+
+To inject additional environment variables into the container, define them under `synthetics.customEnvVars` in `values.yaml`:
+
+  synthetics:
+    customEnvVars:
+      - name: MY_ENV_VAR
+        value: "value1"
+      - name: LOG_LEVEL
+        value: "debug"
 
 ## Resources
 
