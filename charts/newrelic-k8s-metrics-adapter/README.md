@@ -1,1 +1,0 @@
-This chart has been moved to https://github.com/newrelic/newrelic-k8s-metrics-adapter/tree/main/charts/newrelic-k8s-metrics-adapter

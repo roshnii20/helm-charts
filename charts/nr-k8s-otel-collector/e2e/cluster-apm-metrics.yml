@@ -1,4 +1,0 @@
-entities:
-  - entityType: Metric
-    metrics:
-      - name: "k8s.cluster.info"
