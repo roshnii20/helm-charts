@@ -165,6 +165,8 @@ tolerations: []
 
 affinity: {}
 
+# Extra containers to be added as sidecars to all deployments
+extraContainers: []
 
 ping-runtime:
   enabled: true
@@ -231,7 +233,6 @@ ping-runtime:
   tolerations: []
 
   affinity: {}
-
 
 node-api-runtime:
   enabled: true
@@ -301,7 +302,6 @@ node-api-runtime:
   tolerations: []
 
   affinity: {}
-
 
 node-browser-runtime:
   enabled: true

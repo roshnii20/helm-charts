@@ -1,0 +1,54 @@
+apiVersion: v1
+entries:
+  newrelic-pixie:
+  - apiVersion: v1
+    appVersion: 2.2.1
+    created: "2025-05-23T16:58:37.626887-07:00"
+    description: A Helm chart for the New Relic Pixie integration.
+    digest: b1b11d118e41d5ec595ef701c9d38c4802fa73728e55ca3732d8be639046f520
+    home: https://hub.docker.com/u/newrelic
+    icon: https://newrelic.com/assets/newrelic/source/NewRelic-logo-square.svg
+    keywords:
+    - newrelic
+    - pixie
+    - monitoring
+    maintainers:
+    - name: nserrino
+    - name: philkuz
+    - name: htroisi
+    - name: vuqtran88
+    name: newrelic-pixie
+    sources:
+    - https://github.com/newrelic/
+    urls:
+    - newrelic-pixie-2.1.6.tgz
+    version: 2.1.6
+  synthetics-minion:
+  - apiVersion: v2
+    appVersion: 3.1.17
+    created: "2025-05-23T16:58:37.627567-07:00"
+    description: New Relic Synthetics Containerized Private Minion (CPM)
+    digest: dc21a8a4988319af3333e6e2dfd7aee917e13e294f8b64c7a369522e800be7bf
+    home: https://github.com/orgs/newrelic/teams/proactive-monitoring
+    keywords:
+    - synthetics
+    - synthetics-minion
+    - newrelic
+    maintainers:
+    - name: Philip-R-Beckwith
+    - name: sshah-nr
+    - name: vkasanneni-nr
+    - name: marcusperezNR
+    - name: mderemer-nr
+    - name: kaschaefer-nr
+    - name: sadafarshad
+    - name: lromer22
+    - name: kondracek-nr
+    - email: team_proactive-monitoring@newrelic.com
+      name: sidnaiknewrelic
+    name: synthetics-minion
+    type: application
+    urls:
+    - synthetics-minion/synthetics-minion-1.0.67.tgz
+    version: 1.0.67
+generated: "2025-05-23T16:58:37.626175-07:00"

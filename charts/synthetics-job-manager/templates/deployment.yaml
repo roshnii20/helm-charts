@@ -121,6 +121,9 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           terminationMessagePolicy: FallbackToLogsOnError
+        {{- with .Values.extraContainers }}
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
 
       terminationGracePeriodSeconds: {{ include "synthetics-job-manager.terminationGracePeriodSeconds" . }}
 

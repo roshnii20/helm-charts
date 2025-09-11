@@ -46,6 +46,9 @@ spec:
               volumeMounts:
                 {{- include "synthetics-job-manager.customNodeModulesMount" . | nindent 16 }}
               {{ end }}
+            {{- with .Values.extraContainers }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
           {{- with .Values.nodeSelector }}
           nodeSelector:
             {{- toYaml . | nindent 12 }}
