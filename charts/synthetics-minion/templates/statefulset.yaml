@@ -189,6 +189,14 @@ spec:
               value: "{{ .Values.synthetics.minionJVMOpts }}"
             {{- end }}
 
+            {{- if .Values.synthetics.customEnvVars }}
+            {{- range .Values.synthetics.customEnvVars }}
+            - name: {{ .name | quote }}
+              value: {{ .value | quote }}
+            {{- end }}
+            {{- end }}
+
+
           ports:
             - name: http
               containerPort: 8080

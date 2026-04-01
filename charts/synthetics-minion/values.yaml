@@ -65,6 +65,16 @@ synthetics:
   ## A minion is not healthy if it cannot connect to the public internet. Set this value to true to bypass this health check.
   #  minionNetworkHealthCheckDisabled: "false"
 
+  ## Custom environment variables to be added to the container.
+  customEnvVars: []
+  # Example:
+  # customEnvVars:
+  #   - name: MY_ENV_VAR
+  #     value: "some-value"
+  #   - name: ANOTHER_VAR
+  #     value: "another-value"
+
+
 image:
   # This parameter determines what container the pod will run as.
   repository: quay.io/newrelic/synthetics-minion
